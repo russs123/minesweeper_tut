@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://d05640hmpi44l"]
+
+[ext_resource type="Texture2D" uid="uid://g3aejip2oymh" path="res://assets/flag.png" id="1_x05a5"]
+[ext_resource type="Texture2D" uid="uid://b6c0gjjflg4q6" path="res://assets/timer.png" id="2_88rm7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwidd"]
+bg_color = Color(0.117647, 0.396078, 0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = 700.0
+offset_right = 750.0
+offset_bottom = 750.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uwidd")
+
+[node name="Flag" type="Sprite2D" parent="."]
+position = Vector2(85, 700)
+texture = ExtResource("1_x05a5")
+offset = Vector2(25, 25)
+
+[node name="RemainingMines" type="Label" parent="."]
+offset_left = 135.0
+offset_top = 711.0
+offset_right = 175.0
+offset_bottom = 748.0
+theme_override_font_sizes/font_size = 24
+text = "40"
+
+[node name="Time" type="Sprite2D" parent="."]
+position = Vector2(595, 700)
+texture = ExtResource("2_88rm7")
+offset = Vector2(25, 25)
+
+[node name="Stopwatch" type="Label" parent="."]
+offset_left = 641.0
+offset_top = 705.0
+offset_right = 681.0
+offset_bottom = 742.0
+theme_override_font_sizes/font_size = 24
+text = "0"
